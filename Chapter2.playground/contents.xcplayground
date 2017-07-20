@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='rendered' executeOnSourceChanges='false'>
+    <pages>
+        <page name='2.1'/>
+        <page name='2.2'/>
+        <page name='2.3'/>
+        <page name='2.5'/>
+        <page name='2.6'/>
+        <page name='2.8'/>
+        <page name='2.9'/>
+        <page name='2.12'/>
+    </pages>
+</playground>
