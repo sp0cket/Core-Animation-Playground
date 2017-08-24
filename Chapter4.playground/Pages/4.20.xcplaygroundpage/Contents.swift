@@ -13,14 +13,25 @@ PlaygroundPage.current.liveView = window
 //:
 //: 摘录来自: 钟声. “ios核心动画高级技巧”。 iBooks.
 
-let button1 = UIButton(frame: CGRect(x: 50, y: 50, width: 150, height: 50))
-button1.backgroundColor = .white
-button1.layer.cornerRadius = 10
-let label1 = UILabel(frame: CGRect(x: 20, y: 10, width: 110, height: 30))
-label1.text = "Hello World"
-label1.textAlignment = .center
-button1.addSubview(label1)
+func createButton() -> UIButton {
+    let button = UIButton(frame: CGRect(origin: CGPoint(), size: CGSize(width: 150, height: 50)))
+    button.backgroundColor = .white
+    button.layer.cornerRadius = 10
+    let label = UILabel(frame: CGRect(x: 20, y: 10, width: 110, height: 30))
+    label.text = "Hello World"
+    label.textAlignment = .center
+    button.addSubview(label)
+    return button
+}
+
+let button1 = createButton()
+button1.center = CGPoint(x: 100, y: 150)
 window.addSubview(button1)
 
+let button2 = createButton()
+button2.center = CGPoint(x: 300, y: 150)
+button2.alpha = 0.5
+window.addSubview(button2)
 
-//: [Next](@next)
+button2.layer.shouldRasterize = true
+button2.layer.rasterizationScale = UIScreen.main.scale
